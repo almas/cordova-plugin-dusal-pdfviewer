@@ -22,7 +22,7 @@ var options = {
     swipeHorizontal:false
   };
 
-DusalPdfViewer.viewPdf(url, title, options,
+DusalPdfViewer.openPdf(url, title, options,
     function(success){
         // success callback
     },function(error){
