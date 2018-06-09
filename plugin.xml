@@ -1,10 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-dusal-pdfviewer" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-dusal-pdfviewer" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Dusal AndroidPdfViewer</name>
     <js-module name="DusalPdfViewer" src="www/DusalPdfViewer.js">
         <clobbers target="window.DusalPdfViewer"/>
     </js-module>
     <dependency id="cordova-plugin-android-native-pdfviewer"/>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DusalPdfViewer">
+                <param name="ios-package" value="DusalPdfViewer" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/DusalPdfViewer.m" />
+        <header-file src="src/ios/DusalPdfViewer.h" />
+    </platform>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="DusalPdfViewer">
