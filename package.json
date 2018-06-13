@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-dusal-pdfviewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cordova plugin Android Pdf viewer",
   "cordova": {
     "id": "cordova-plugin-dusal-pdfviewer",
